@@ -1,0 +1,10 @@
+### Aliases
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+    alias ls='ls -1aFG'
+    alias ll='ls -GFl'
+    alias la='ls -GFla'
+    alias lh='ls -GFlh'
+    alias mem='top -o rsize'
+    alias cpu='top -o cpu'
+    alias path='echo $PATH | tr ":" "\n"'
+    alias cputemp='sudo powermetrics  | grep -C3 "CPU die temperature"'
