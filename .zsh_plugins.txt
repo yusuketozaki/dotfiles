@@ -1,0 +1,11 @@
+# --- 補完 ---
+zsh-users/zsh-completions kind:fpath path:src
+mattmc3/ez-compinit
+
+# --- 入力体験 ---
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+# --- 履歴検索 ---
+zsh-users/zsh-history-substring-search
+

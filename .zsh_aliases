@@ -1,6 +1,6 @@
 ### Aliases
     export LSCOLORS=gxfxcxdxbxegedabagacad
-    alias ls='ls -1aFG'
+    alias ls='ls -G'
     alias ll='ls -GFl'
     alias la='ls -GFla'
     alias lh='ls -GFlh'
