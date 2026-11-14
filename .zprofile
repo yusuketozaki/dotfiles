@@ -1,11 +1,9 @@
-# Q pre block. Keep at the top of this file.
-# [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Load .zshrc file
-if [ -f "$HOME/.zshrc" ]; then
-   source "$HOME/.zshrc"
+# Homebrew の場所は Apple silicon と Intel Mac で異なる。
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x /usr/local/bin/brew ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
 fi
 
-# Q post block. Keep at the bottom of this file.
-# [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh"
+# 端末固有の設定は Git で管理しない。
+[[ -r "$HOME/.zprofile.local" ]] && source "$HOME/.zprofile.local"

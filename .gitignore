@@ -1,0 +1,14 @@
+# Mac 固有の設定や認証情報を管理対象にしない。
+.DS_Store
+.zshrc.local
+.zprofile.local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.zsh_history
+.zcompdump*
+.zsh_plugins.zsh
